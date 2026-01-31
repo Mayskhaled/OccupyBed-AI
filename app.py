@@ -15,7 +15,7 @@ from sklearn.preprocessing import StandardScaler
 # ---------------------------------------------------------
 print(" Model loaded successfully")
 print(" Prediction pipeline executed")
-st.set_page_config(page_title="OccupyBed AI - Advanced", layout="wide", page_icon="🏥")
+st.set_page_config(page_title="OccupyBed AI - Advanced", layout="wide", page_icon")
 
 CURRENT_DATE = datetime(2026, 1, 8, 12, 0, 0)
 
