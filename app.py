@@ -294,7 +294,7 @@ with st.sidebar:
 # 5. OVERVIEW (COMPLETE)
 # ---------------------------------------------------------
 if menu == "Overview":
-    st.title("🏥 Hospital Command Center (ML-Enhanced)")
+    st.title(" Hospital Command Center (ML-Enhanced)")
     
     if not model_loaded or not data_loaded:
         st.error("❌ Cannot proceed: Model or data not loaded. Check Settings.")
@@ -484,7 +484,7 @@ elif menu == "Patient Analytics":
 # 7. BED FORECAST (COMPLETE)
 # ---------------------------------------------------------
 elif menu == "Bed Forecast":
-    st.title("🛏️ Bed Occupancy Forecast")
+    st.title(" Bed Occupancy Forecast")
     
     if not model_loaded or not data_loaded:
         st.error("❌ Model or data not loaded.")
