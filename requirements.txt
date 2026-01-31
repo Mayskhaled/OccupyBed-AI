@@ -1,48 +1,41 @@
 # ============================================================
-# OccupyBed AI - Requirements (Fixed for Model Compatibility)
+# OccupyBed AI - Requirements (Streamlit Compatible)
 # ============================================================
 
-# Install pip tools first
-pip>=23.2.1
-setuptools>=68.0.0
-wheel>=0.41.2
-
-# Core dependencies FIRST (no dependencies)
-joblib>=1.3.1  # Relaxed to allow newer versions if needed
-pytz>=2023.3  # Changed from == to >=
-python-dateutil>=2.8.2  # Changed from == to >=
+# Streamlit specific - MUST BE FIRST
+streamlit>=1.28.0
 
 # Core data processing
-# CRITICAL CHANGE: Pinned to version compatible with TensorFlow 2.15
-numpy==1.24.3
+numpy>=1.24.0
 scipy>=1.11.1
+pandas>=2.0.0
 
-# Data manipulation
-pandas==2.0.3
+# Machine Learning - updated for compatibility
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+
+# Deep Learning - use latest TensorFlow with Python 3.11 support
+tensorflow-cpu>=2.15.0
+keras>=2.15.0
 
 # Visualization
-plotly>=5.17.0  # Changed from == to >=
-matplotlib>=3.7.2  # Changed from == to >=
-seaborn>=0.12.2  # Changed from == to >=
-
-# Machine Learning
-# CRITICAL CHANGE: Upgraded to newer version compatible with Python 3.11
-scikit-learn==1.5.0  # Changed from 1.6.1 to 1.5.0 (more compatible)
-xgboost>=2.0.0  # Changed from == to >=
-
-# Deep Learning
-# CRITICAL CHANGE: Upgraded TensorFlow to version with Python 3.11 support
-tensorflow-cpu==2.15.0  # Changed from 2.13.0 to 2.15.0
-keras==2.15.0  # Changed from 2.13.1 to 2.15.0 (matches TF 2.15)
-
-# Web Framework
-streamlit>=1.28.1  # Changed from == to >=
+plotly>=5.17.0
+matplotlib>=3.7.2
+seaborn>=0.12.2
 
 # Utilities
-requests>=2.31.0  # Changed from == to >=
-urllib3>=2.0.4  # Changed from == to >=
-Pillow>=10.0.0  # Changed from == to >=
-python-dotenv>=1.0.0  # Changed from == to >=
-tqdm>=4.65.0  # Changed from == to >=
-openpyxl>=3.1.2  # Changed from == to >=
-pyarrow>=13.0.0  # Changed from == to >=
+joblib>=1.3.1
+pytz>=2023.3
+python-dateutil>=2.8.2
+requests>=2.31.0
+urllib3>=2.0.4
+Pillow>=10.0.0
+python-dotenv>=1.0.0
+tqdm>=4.65.0
+openpyxl>=3.1.2
+pyarrow>=13.0.0
+
+# Build tools (optional, Streamlit provides these)
+# pip>=23.2.1
+# setuptools>=68.0.0
+# wheel>=0.41.2
