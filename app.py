@@ -13,14 +13,41 @@ from sklearn.preprocessing import StandardScaler
 # ---------------------------------------------------------
 # 1. System Config & Design
 # ---------------------------------------------------------
-# 1. Page settings first
-st.set_page_config(page_title="My Dashboard", layout="wide")
+import streamlit as st
+from PIL import Image
 
-# 2. Then the logo
-st.logo("assets/logo.png", size="large")
+# 1. Page config first
+st.set_page_config(layout="wide")
 
-print(" Model loaded successfully")
-print(" Prediction pipeline executed")
+# 2. Add Custom CSS for image height
+st.markdown(
+    """
+    <style>
+    /* Target the specific image in the sidebar and set max height */
+    .stImage > img {
+        max-height: 150px; /* Adjust this value as needed */
+        width: auto;      /* Maintain aspect ratio */
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# 3. Open and display the image in the sidebar
+# Using PIL to manage the image locally before display can also help if pure CSS is tricky
+try:
+    image = Image.open("assets/your_logo.png") # Replace with your actual path/filename
+    st.sidebar.image(image)
+except FileNotFoundError:
+    st.sidebar.error("Logo file not found. Check path.")
+
+# 4. Add your main title below the image in the sidebar
+st.sidebar.title("OccupyBed AI") 
+# Add other sidebar elements here...
+
+# 5. Main content of your app
+st.title("Hospital Command Center (ML-Enhanced)")
+
 st.set_page_config(page_title="OccupyBed AI - Advanced", layout="wide", page_icon="")
 
 CURRENT_DATE = datetime(2026, 1, 8, 12, 0, 0)
