@@ -13,6 +13,12 @@ from sklearn.preprocessing import StandardScaler
 # ---------------------------------------------------------
 # 1. System Config & Design
 # ---------------------------------------------------------
+# 1. Page settings first
+st.set_page_config(page_title="My Dashboard", layout="wide")
+
+# 2. Then the logo
+st.logo("assets/logo.png", size="large")
+
 print(" Model loaded successfully")
 print(" Prediction pipeline executed")
 st.set_page_config(page_title="OccupyBed AI - Advanced", layout="wide", page_icon="")
