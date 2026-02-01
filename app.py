@@ -36,7 +36,7 @@ st.markdown(
 # 3. Open and display the image in the sidebar
 # Using PIL to manage the image locally before display can also help if pure CSS is tricky
 try:
-    image = Image.open("assets/your_logo.png") # Replace with your actual path/filename
+    image = Image.open("assets/logo.png") # Replace with your actual path/filename
     st.sidebar.image(image)
 except FileNotFoundError:
     st.sidebar.error("Logo file not found. Check path.")
