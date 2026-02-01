@@ -41,10 +41,6 @@ try:
 except FileNotFoundError:
     st.sidebar.error("Logo file not found. Check path.")
 
-# 4. Add your main title below the image in the sidebar
-st.sidebar.title("OccupyBed AI") 
-# Add other sidebar elements here...
-
 # 5. Main content of your app
 st.title("Hospital Command Center (ML-Enhanced)")
 
